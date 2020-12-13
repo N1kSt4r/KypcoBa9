@@ -43,8 +43,8 @@
 		}
 	\end{center}
 	
-		\vspace{10em}
-		
+	\vspace{10em}
+	
 	\begin{center}
 		\textbf{
 			ЦУРАНОВ НИКИТА ВАСИЛЬЕВИЧ \\
@@ -54,7 +54,7 @@
 		}
 		
 		\vspace{3em}
-		Курсовая работа \\
+		Курсовой проект \\
 		Студента 3 курса 7 группы
 		
 	\end{center}
@@ -395,8 +395,7 @@
 
 	По этим коэффициентам можно определить наличие параболического тренда
 	
-	\vspace{2em}
-	
+	\newpage
 	\begin{center}
 		\includegraphics[scale=0.45]{./output_13_0.png}
 		\includegraphics[scale=0.45]{./output_13_1.png}
@@ -409,11 +408,11 @@
 	
 	Хоть тест говорит, что ряд стационарен, но мы наблюдаем увеличение дисперсии
 	
-	\subsection{Преимущества вейвлет-преобразования во временной \\ области}
+	\subsection{Вейвлет-преобразования во временной области}
 	
 	Проведем сравнение обычного статистического анализа на наборе данных о травматизме в 2015 году.
 	
-	После статистического анализа мы можем сказать, что:
+	После статистического анализа мы можем сказать, что:\\
 	
 	\begin{minipage}{0.45\textwidth}
 		\begin{center}
@@ -445,7 +444,7 @@
 		\end{center}
 	\end{minipage}
 	
-	\vspace{2em}
+	\newpage
 	Проведем разложение на этих данных:
 	\begin{center}
 		\includegraphics[scale=0.46]{./output_18_0.png}
@@ -457,6 +456,23 @@
 	Черные пятна на спектрограмме соответствуют всплескам. По коэффициентам можно сказать, что, например, в воскресенье большинство случаев соответствуют апрелю-маю, а в четверг --- середине года. Также по данным мы можем увидеть, что внутри года закономерности не наблюдается. 
 	
 	\newpage
+	
+	\subsection{Взаимный кросс-вейвлет спектр рядов}
+	
+	Проведя непрерывное вейвлет преобразование используя материнский вейвлет "Мексиканская шляпа" для курсов валют можем заметить:
+	\begin{itemize}
+		\item Схожесть поведения USD и EUR и отличие их от RUB
+		\item Разницу трендов в разное время (интенсивность низкочастотных компонент)
+		\item Разделение областей роста и падения, видно что USD и EUR стабильнее
+		\item Так же можно увидеть, что, к примеру, в августе-сентябре можно заметить падение белорусского рубля относительно всех валют
+	\end{itemize}
+
+	\begin{center}
+		\includegraphics[scale=0.4]{./output_7_1.png}
+	\end{center}
+
+	Кросс-корреляция показывает наибольше значения на тех временах и маштабах, где оба ряда ведут себя подобным друг другу образом.
+	
 	
 	\anonsection{Заключение}
 	
@@ -470,6 +486,7 @@
 			\item Проведено сравнение с преобразованием Фурье
 			\item Рассмотрено сглаживание и сжатие временных рядов
 			\item Проведено исследование стационарности
+			\item Анализ коэффициентов разложения
 		\end{itemize}
 	\end{itemize}
 	
@@ -702,6 +719,98 @@ ax = plt.subplot(1, 1, 1)
 cws(timeseries[6], cmap='Greys', ax=ax, clim=[0, 60], 
     title='Данные травматизма в %s' % dayweeks[i])
 plt.show()
+
+..............................
+
+from scipy.signal import fftconvolve
+
+plt.figure(figsize=(12, 5), dpi=150)
+
+coeffs_usd, freq = pywt.cwt(usd_norm, np.arange(1, 35), 'mexh')
+plt.subplot(5, 2, 1)
+plt.imshow(np.real(coeffs_usd), cmap='gray')
+temp = MinMaxScaler().fit_transform(usd.reshape(-1, 1)).reshape(-1)
+plt.plot(33 - temp * 33, color='red', alpha=0.2)
+plt.title('Непрерывное вейвлет преобразование для USD')
+plt.subplot(5, 2, 2)
+plt.title('Логарифм модуля коэффициентов')
+plt.imshow(np.log2(np.abs(coeffs_usd) + 1), cmap='gray')
+
+coeffs_eur, freq = pywt.cwt(eur_norm, np.arange(1, 35), 'mexh')
+plt.subplot(5, 2, 3)
+plt.imshow(coeffs_eur, cmap='gray')
+temp = MinMaxScaler().fit_transform(eur.reshape(-1, 1)).reshape(-1)
+plt.plot(33 - temp * 33, color='red', alpha=0.2)
+plt.title('Непрерывное вейвлет преобразование для EUR')
+plt.subplot(5, 2, 4)
+plt.imshow(np.log2(np.abs(coeffs_eur) + 1), cmap='gray')
+
+coeffs_rub, freq = pywt.cwt(rub_norm, np.arange(1, 35), 'mexh')
+plt.subplot(5, 2, 5)
+plt.imshow(coeffs_rub, cmap='gray')
+temp = MinMaxScaler().fit_transform(rub.reshape(-1, 1)).reshape(-1)
+plt.plot(33 - temp * 33, color='red', alpha=0.2)
+plt.title('Непрерывное вейвлет преобразование для RUB')
+plt.subplot(5, 2, 6)
+plt.imshow(np.log2(np.abs(coeffs_rub) + 1), cmap='gray')
+
+coeffs_eur = (coeffs_eur - coeffs_eur.mean()) / coeffs_eur.std()
+coeffs_usd = (coeffs_usd - coeffs_usd.mean()) / coeffs_usd.std()
+coeffs_rub = (coeffs_rub - coeffs_rub.mean()) / coeffs_rub.std()
+
+cross_coeffs = []
+for i in range(len(coeffs_eur)):
+cross_coeffs.append(fftconvolve(coeffs_eur[i], coeffs_usd[i], 'same'))
+cross_coeffs = np.array(cross_coeffs)
+
+plt.subplot(5, 2, 7)
+plt.imshow(cross_coeffs, cmap='gray')
+plt.title('Кросс-корреляция для коэффициентов EUR и USD')
+plt.subplot(5, 2, 8)
+plt.imshow(np.log2(np.abs(cross_coeffs) + 1), cmap='gray')
+
+cross_coeffs = []
+for i in range(len(coeffs_eur)):
+cross_coeffs.append(fftconvolve(coeffs_eur[i], coeffs_rub[i], 'same'))
+cross_coeffs = np.array(cross_coeffs)
+
+plt.subplot(5, 2, 9)
+plt.imshow(cross_coeffs, cmap='gray')
+plt.title('Кросс-корреляция для коэффициентов EUR и RUB')
+plt.subplot(5, 2, 10)
+plt.imshow(np.log2(np.abs(cross_coeffs) + 1), cmap='gray')
+
+for i in range(1, 11):
+plt.subplot(5, 2, i)
+plt.xticks(())
+plt.yticks(())
+plt.show()
+
+..............................
+
+
+
+coeffs_usd = pywt.wavedec(usd, 'db8')
+plt.figure(figsize=(12, 16), dpi=100)
+res = 0
+for j in range(len(coeffs_usd)):
+coeffs_usd = pywt.wavedec(usd, 'db8')
+for i in range(len(coeffs_usd)):
+if i != j:
+coeffs_usd[i] *= 0
+
+plt.subplot(len(coeffs_usd), 2, j * 2 + 1)
+plt.title(f'{j + 1}-я компонента вейвлет разложения Добеши')
+plt.plot(pywt.waverec(coeffs_usd, 'db8'), color='black')
+plt.xticks(())
+plt.grid()
+
+plt.subplot(len(coeffs_usd), 2, j * 2 + 2)
+res += pywt.waverec(coeffs_usd, 'db8')
+plt.title(f'Восстановление курса USD из первых {j + 1} компонент')
+plt.plot(res, label='rub', color='black')
+plt.xticks(())
+plt.grid()
 
 	\end{lstlisting}
 	

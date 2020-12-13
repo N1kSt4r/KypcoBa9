@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.4.24)  18 MAY 2020 15:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2020.8.4)  13 DEC 2020 21:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **work.tex
 (./work.tex
 LaTeX2e <2017-04-15>
-Babel <3.18> and hyphenation patterns for 18 language(s) loaded.
+Babel <3.18> and hyphenation patterns for 12 language(s) loaded.
 (/usr/share/texlive/texmf-dist/tex/latex/base/article.cls
 Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/size10.clo
@@ -529,6 +529,8 @@ File: babel.def 2018/02/14 3.18 Babel common definitions
 (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@dirlevel=\count109
 )
+\l@british = a dialect from \language\l@english 
+\l@UKenglish = a dialect from \language\l@english 
 \l@canadian = a dialect from \language\l@american 
 \l@australian = a dialect from \language\l@british 
 \l@newzealand = a dialect from \language\l@british 
@@ -939,22 +941,17 @@ File: ./output_3_0.png Graphic file (type png)
 Package pdftex.def Info: ./output_3_0.png  used on input line 311.
 (pdftex.def)             Requested size: 411.03183pt x 248.42583pt.
  [9 <./output_2_0.png> <./output_3_0.png>]
-<./output_7_0.png, id=68, 929.4725pt x 467.7475pt>
+<./output_7_0.png, id=68, 764.10469pt x 944.7797pt>
 File: ./output_7_0.png Graphic file (type png)
 <use ./output_7_0.png>
 Package pdftex.def Info: ./output_7_0.png  used on input line 321.
-(pdftex.def)             Requested size: 464.73512pt x 233.87317pt.
-
-Overfull \hbox (11.76723pt too wide) in paragraph at lines 321--322
- [] 
- []
-
-<./img1_1.png, id=69, 588.1975pt x 257.96375pt>
+(pdftex.def)             Requested size: 382.0514pt x 472.38869pt.
+ [10 <./output_7_0.png>]
+<./img1_1.png, id=73, 588.1975pt x 257.96375pt>
 File: ./img1_1.png Graphic file (type png)
 <use ./img1_1.png>
 Package pdftex.def Info: ./img1_1.png  used on input line 333.
 (pdftex.def)             Requested size: 264.68643pt x 116.0826pt.
-[10 <./output_7_0.png> <./img1_1.png>]
 <./img1_2.png, id=74, 579.16376pt x 251.94125pt>
 File: ./img1_2.png Graphic file (type png)
 <use ./img1_2.png>
@@ -985,76 +982,92 @@ Overfull \hbox (3.73724pt too wide) in paragraph at lines 348--350
  [] 
  []
 
-[11 <./img1_2.png> <./img1_3.png> <./output_9_0.png> <./output_9_1.png>]
-<./output_10_0.png, id=83, 913.4125pt x 196.735pt>
+[11 <./img1_1.png> <./img1_2.png> <./img1_3.png>]
+<./output_10_0.png, id=81, 913.4125pt x 196.735pt>
 File: ./output_10_0.png Graphic file (type png)
 <use ./output_10_0.png>
 Package pdftex.def Info: ./output_10_0.png  used on input line 361.
 (pdftex.def)             Requested size: 411.03183pt x 88.52992pt.
-<./output_10_1.png, id=84, 913.4125pt x 199.74625pt>
+<./output_10_1.png, id=82, 913.4125pt x 199.74625pt>
 File: ./output_10_1.png Graphic file (type png)
 <use ./output_10_1.png>
 Package pdftex.def Info: ./output_10_1.png  used on input line 362.
 (pdftex.def)             Requested size: 411.03183pt x 89.88498pt.
-<./output_11_0.png, id=85, 913.4125pt x 196.735pt>
+<./output_11_0.png, id=83, 913.4125pt x 196.735pt>
 File: ./output_11_0.png Graphic file (type png)
 <use ./output_11_0.png>
 Package pdftex.def Info: ./output_11_0.png  used on input line 375.
 (pdftex.def)             Requested size: 411.03183pt x 88.52992pt.
-<./output_11_1.png, id=86, 913.4125pt x 199.74625pt>
+<./output_11_1.png, id=84, 913.4125pt x 199.74625pt>
 File: ./output_11_1.png Graphic file (type png)
 <use ./output_11_1.png>
 Package pdftex.def Info: ./output_11_1.png  used on input line 376.
 (pdftex.def)             Requested size: 411.03183pt x 89.88498pt.
-<./output_12_0.png, id=87, 913.4125pt x 196.735pt>
+ [12 <./output_9_0.png> <./output_9_1.png> <./output_10_0.png> <./output_10_1.p
+ng>]
+<./output_12_0.png, id=92, 913.4125pt x 196.735pt>
 File: ./output_12_0.png Graphic file (type png)
 <use ./output_12_0.png>
 Package pdftex.def Info: ./output_12_0.png  used on input line 387.
 (pdftex.def)             Requested size: 411.03183pt x 88.52992pt.
-<./output_12_1.png, id=88, 913.4125pt x 199.74625pt>
+<./output_12_1.png, id=93, 913.4125pt x 199.74625pt>
 File: ./output_12_1.png Graphic file (type png)
 <use ./output_12_1.png>
 Package pdftex.def Info: ./output_12_1.png  used on input line 388.
 (pdftex.def)             Requested size: 411.03183pt x 89.88498pt.
-
-[12 <./output_10_0.png> <./output_10_1.png> <./output_11_0.png> <./output_11_1.
-png>]
-<./output_13_0.png, id=96, 913.4125pt x 196.735pt>
+ [13 <./output_11_0.png> <./output_11_1.png> <./output_12_0.png> <./output_12_1
+.png>]
+<./output_13_0.png, id=102, 913.4125pt x 196.735pt>
 File: ./output_13_0.png Graphic file (type png)
 <use ./output_13_0.png>
-Package pdftex.def Info: ./output_13_0.png  used on input line 401.
+Package pdftex.def Info: ./output_13_0.png  used on input line 400.
 (pdftex.def)             Requested size: 411.03183pt x 88.52992pt.
-<./output_13_1.png, id=97, 913.4125pt x 199.74625pt>
+<./output_13_1.png, id=103, 913.4125pt x 199.74625pt>
 File: ./output_13_1.png Graphic file (type png)
 <use ./output_13_1.png>
-Package pdftex.def Info: ./output_13_1.png  used on input line 402.
+Package pdftex.def Info: ./output_13_1.png  used on input line 401.
 (pdftex.def)             Requested size: 411.03183pt x 89.88498pt.
- [13 <./output_12_0.png> <./output_12_1.png> <./output_13_0.png> <./output_13_1
-.png>]
-<./output_18_0.png, id=106, 969.6225pt x 934.49126pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 415--416
+
+ []
+
+[14 <./output_13_0.png> <./output_13_1.png>]
+<./output_18_0.png, id=109, 969.6225pt x 934.49126pt>
 File: ./output_18_0.png Graphic file (type png)
 <use ./output_18_0.png>
-Package pdftex.def Info: ./output_18_0.png  used on input line 451.
+Package pdftex.def Info: ./output_18_0.png  used on input line 450.
 (pdftex.def)             Requested size: 446.03177pt x 429.8712pt.
-<./output_18_1.png, id=107, 943.525pt x 279.0425pt>
+<./output_18_1.png, id=110, 943.525pt x 279.0425pt>
 File: ./output_18_1.png Graphic file (type png)
 <use ./output_18_1.png>
-Package pdftex.def Info: ./output_18_1.png  used on input line 452.
+Package pdftex.def Info: ./output_18_1.png  used on input line 451.
 (pdftex.def)             Requested size: 434.02676pt x 128.3611pt.
- [14 <./output_18_0.png>] [15 <./output_18_1.png>] [16]
-Underfull \hbox (badness 1902) in paragraph at lines 484--485
+ [15 <./output_18_0.png> <./output_18_1.png>]
+Overfull \hbox (0.59378pt too wide) in paragraph at lines 462--463
+\T2A/cmr/m/n/12 ѕровед€ непре-рыв-ное вей-влет пре-об-ра-зо-ва-ние ис-поль-зу€ 
+ма-те-рин-ский вей-влет "ћек-
+ []
+
+<./output_7_1.png, id=116, 1084.05pt x 452.4403pt>
+File: ./output_7_1.png Graphic file (type png)
+<use ./output_7_1.png>
+Package pdftex.def Info: ./output_7_1.png  used on input line 471.
+(pdftex.def)             Requested size: 433.61232pt x 180.97292pt.
+[16 <./output_7_1.png>]
+Underfull \hbox (badness 1902) in paragraph at lines 501--502
 []\T2A/cmr/m/n/12 Wavelet transform --- Wikipedia [Ёлек-трон-ный ре-сурс]. --- 
 –е-жим до-сту-па:
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 486--487
+Underfull \hbox (badness 10000) in paragraph at lines 503--504
 []\T2A/cmr/m/n/12 Haar wavelet ^^U Wikipedia [Ёлек-трон-ный ре-сурс]. ^^U –е-жи
 м до-сту-па:
  []
 
 
-Underfull \hbox (badness 2512) in paragraph at lines 488--489
+Underfull \hbox (badness 2512) in paragraph at lines 505--506
 []\T2A/cmr/m/n/12 Fourier transform --- Wikipedia [Ёлек-трон-ный ре-сурс]. --- 
 –е-жим до-сту-па:
  []
@@ -1062,71 +1075,96 @@ Underfull \hbox (badness 2512) in paragraph at lines 488--489
 [17] (/usr/share/texlive/texmf-dist/tex/latex/base/utf8.def
 File: utf8.def 2017/01/28 v1.1t UTF-8 support for inputenc
 )
-Overfull \hbox (26.31921pt too wide) in paragraph at lines 518--520
+Overfull \hbox (26.31921pt too wide) in paragraph at lines 535--537
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [18]
-Overfull \hbox (12.22253pt too wide) in paragraph at lines 559--560
+Overfull \hbox (12.22253pt too wide) in paragraph at lines 576--577
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (61.56091pt too wide) in paragraph at lines 563--564
+Overfull \hbox (61.56091pt too wide) in paragraph at lines 580--581
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (12.22253pt too wide) in paragraph at lines 573--574
+Overfull \hbox (12.22253pt too wide) in paragraph at lines 590--591
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 
-Overfull \hbox (54.51257pt too wide) in paragraph at lines 583--584
+Overfull \hbox (54.51257pt too wide) in paragraph at lines 600--601
 [][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][
 ][][][] 
  []
 
 [19]
-Overfull \hbox (40.4159pt too wide) in paragraph at lines 594--596
+Overfull \hbox (40.4159pt too wide) in paragraph at lines 611--613
 [][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
 [20]
-Overfull \hbox (5.1742pt too wide) in paragraph at lines 666--667
+Overfull \hbox (5.1742pt too wide) in paragraph at lines 683--684
 [][][][][][][][][][][][][][][][][][][][][][][][][][][] 
  []
 
-[21] [22] (./work.aux) ) 
+[21]
+Overfull \hbox (19.27087pt too wide) in paragraph at lines 732--733
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (19.27087pt too wide) in paragraph at lines 742--743
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+[22]
+Overfull \hbox (19.27087pt too wide) in paragraph at lines 751--752
+[][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.4159pt too wide) in paragraph at lines 763--764
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (40.4159pt too wide) in paragraph at lines 774--775
+[][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+[23] [24] (./work.aux) ) 
 Here is how much of TeX's memory you used:
- 6078 strings out of 494283
- 79696 string characters out of 6169691
- 180926 words of memory out of 5000000
- 9213 multiletter control sequences out of 15000+600000
+ 6116 strings out of 494397
+ 80181 string characters out of 6172289
+ 180522 words of memory out of 5000000
+ 9236 multiletter control sequences out of 15000+600000
  17686 words of font info for 46 fonts, out of 8000000 for 9000
- 497 hyphenation exceptions out of 8191
+ 430 hyphenation exceptions out of 8191
  41i,11n,43p,1716b,1428s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh
-/lh-t2a/labx1440.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/
-lh-t2a/larm1000.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/l
-h-t2a/labx1728.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh
--t2a/larm1440.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-
-t2a/lati1200.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t
-2a/larm1200.600pk> </home/nekit/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2
-a/labx1200.600pk></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/
-cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/sha
-re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texl
-ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texm
-f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
-ype1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
-blic/amsfonts/cm/cmsy8.pfb>
-Output written on work.pdf (22 pages, 1965903 bytes).
+ </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh
+-t2a/labx1440.600pk> </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a
+/larm1000.600pk> </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lab
+x1728.600pk> </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm144
+0.600pk> </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a/lati1200.60
+0pk> </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a/larm1200.600pk>
+ </home/ne/.texlive2017/texmf-var/fonts/pk/ljfour/lh/lh-t2a/labx1200.600pk></us
+r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texl
+ive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist
+/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texlive/texmf-dist/fonts/
+type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy
+8.pfb>
+Output written on work.pdf (24 pages, 2387567 bytes).
 PDF statistics:
- 540 PDF objects out of 1000 (max. 8388607)
- 109 compressed objects within 2 object streams
+ 559 PDF objects out of 1000 (max. 8388607)
+ 113 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 155 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 160 words of extra memory for PDF output out of 10000 (max. 10000000)
 
